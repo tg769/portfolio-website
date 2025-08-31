@@ -932,6 +932,81 @@ main {
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
 
+
+/* Modal overlay */
+.project-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.project-modal-content {
+  background: var(--jet);
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  color: var(--white-2);
+  position: relative;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+/* Close button */
+.project-modal-close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--orange-yellow-crayola);
+}
+.project-description {
+  margin: 20px auto;
+  max-width: 90%;
+  line-height: 1.6;
+  color: var(--white-2);
+  font-size: 15px;
+}
+
+/* Image inside modal */
+.modal-img {
+  max-width: 80%;     
+  height: auto;        
+  margin: 20px auto;   
+  display: block;
+  border-radius: 12px; 
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.project-links .btn {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-links .btn:hover {
+  opacity: 0.85;
+}
+
+
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1755,10 +1830,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: 230px; }
 
 }
-
-
-
-
 
 /**
  * responsive larger than 1250px screen

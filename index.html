@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Tanmay Ghate" width="80">
+          <img style="border-radius: 20px;" src="./assets/images/memoji1.png" alt="Tanmay Ghate" width="80">
         </figure>
 
         <div class="info-content">
@@ -171,7 +171,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
 
           <li class="navbar-item">
@@ -220,13 +220,44 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Coursework Focus</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Strengthening CS fundamentals — Operating Systems, Computer Networks and Database Systems.
                 </p>
               </div>
+          
+            </li>
 
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Structures & Algorithms</h4>
+
+                <p class="service-item-text">
+                  Problem-solving practice — 150+ LeetCode problems and counting.
+                </p>
+              </div>
+          
+            </li>
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Next Build: Lost & Found (AI-assisted)</h4>
+
+                <p class="service-item-text">
+                  Campus Lost & Found web app; exploring light AI for image/text similarity and smart tagging.
+                </p>
+              </div>
+          
             </li>
           </ul>
         </section>
@@ -261,7 +292,7 @@
 
         <a href="assets/resume.pdf" target="_blank" class="form-btn">
   <ion-icon name="document-text"></ion-icon>
-  <span>View Resume</span>
+  <span>View Full Resume</span>
 </a>
         <section class="timeline">
 
@@ -396,10 +427,10 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="projects" data-page="projects">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="projects">
@@ -414,55 +445,43 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://ridesnet.com">
+          <!-- Project Item -->
+          <li class="project-item active" data-filter-item data-category="web development">
+            <a href="#" class="project-link" data-project="ridesnet">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/rideshare.png" alt="rideshare" loading="lazy">
+              </figure>
+              <h3 class="project-title">Ridesnet</h3>
+              <p class="project-category">Web development</p>
+            </a>
+          </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+          <!-- Modal -->
+          <div class="project-modal" id="ridesnet-modal">
+            <div class="project-modal-content">
+              <span class="project-modal-close">&times;</span>
+              <h3 class="project-title">Ridesnet</h3>
+              <img src="./assets/images/rideshare.png" alt="rideshare preview" class="modal-img">
+              <p class="project-description">
+                Ridesnet is a MERN-stack ride-sharing platform where users can both post and book rides. 
+                It features authentication, real-time chat, and notifications powered by Socket.io, all 
+                wrapped in a responsive UI. Deployed with Docker, the system is built with scalability and 
+                smooth user experience in mind.
+              </p>
+              <div class="project-links">
+                <a href="https://ridesnet.com" target="_blank" class="btn">View Website</a>
+                <a href="https://github.com/tg769/ride-sharing-app" target="_blank" class="btn">GitHub</a>
+              </div>
+            </div>
+          </div>
 
-                  <img src="./assets/images/rideshare.png" alt="rideshare" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Ridesnet</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
 
           </ul>
-
         </section>
-
       </article>
-
-
-
-
-
-  
-
-
 
       <!--
         - #CONTACT
@@ -477,7 +496,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208700.99115658118!2d-111.77749805815775!3d35.18272429047085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8ef7da2e2631%3A0x8e1f3ca1cedbb300!2sFlagstaff%2C%20AZ!5e0!3m2!1sen!2sus!4v1756554725609!5m2!1sen!2sus" 
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
@@ -486,22 +505,22 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+         <form action="https://formspree.io/f/xzzarjjk" method="POST" class="form" data-form>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        <div class="input-wrapper">
+          <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+          <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+        </div>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        <button class="form-btn" type="submit" data-form-btn>
+          <ion-icon name="paper-plane"></ion-icon>
+          <span>Send Message</span>
+        </button>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+      </form>
 
-          </form>
 
         </section>
 
