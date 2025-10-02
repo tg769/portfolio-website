@@ -3,10 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
 
 
 
@@ -14,6 +10,66 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+:root {
+
+  /**
+   * colors
+   */
+
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+
+  /* Accent gradients (replacing yellow) */
+  --bg-gradient-cyan-1: linear-gradient(
+    to bottom right, 
+    hsl(187, 100%, 50%) 0%,   /* #00E5FF */
+    hsla(187, 100%, 50%, 0) 50%
+  );
+  --bg-gradient-cyan-2: linear-gradient(
+    135deg, 
+    hsla(187, 100%, 50%, 0.25) 0%, 
+    hsla(187, 100%, 50%, 0) 60%
+  ), hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+
+  /* Text gradient */
+  --text-gradient-cyan: linear-gradient(
+    to right, 
+    hsl(187, 100%, 50%),      /* aqua */
+    hsl(197, 100%, 45%)       /* slightly deeper cyan */
+  );
+
+  /* solid colors */
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+
+  /* Accent solids (was yellow) */
+  --aqua-bright: hsl(187, 100%, 50%);     /* main accent (#00E5FF) */
+  --aqua-muted: hsl(197, 100%, 65%);      /* softer cyan, replaces vegas gold */
+
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%); /* keep this for errors/warnings */
+}
+
 
 :root {
 
@@ -147,11 +203,11 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var(--aqua-bright);
   color: var(--smoky-black);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--aqua-bright); } /*change here */
 
 html { font-family: var(--ff-poppins); }
 
@@ -192,7 +248,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  color: var(--aqua-bright); /*here*/
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -251,7 +307,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-cyan);
   border-radius: 3px;
 }
 
@@ -266,7 +322,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--aqua-bright);
   border-radius: 5px;
 }
 
@@ -360,7 +416,7 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
+  color: var(--aqua-bright); /*here*/
   background: var(--border-gradient-onyx);
   padding: 10px;
   box-shadow: var(--shadow-2);
@@ -379,10 +435,10 @@ main {
 }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus { background: var(--bg-gradient-cyan-1); }
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before { background: var(--bg-gradient-cyan-2); }
 
 .info_more-btn span { display: none; }
 
@@ -485,7 +541,7 @@ main {
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { color: var(--aqua-bright); } /*here*/
 
 
 
@@ -796,7 +852,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--aqua-muted); /*here*/
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -818,7 +874,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-cyan);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -862,7 +918,7 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-cyan);
   height: 100%;
   border-radius: inherit;
 }
@@ -964,7 +1020,7 @@ main {
   top: 15px; right: 20px;
   font-size: 28px;
   cursor: pointer;
-  color: var(--orange-yellow-crayola);
+  color: var(--aqua-bright);
 }
 .project-description {
   margin: 20px auto;
@@ -992,7 +1048,7 @@ main {
 }
 
 .project-links .btn {
-  background: var(--orange-yellow-crayola);
+  background: var(--aqua-bright);
   color: var(--smoky-black);
   padding: 10px 18px;
   border-radius: 8px;
@@ -1055,7 +1111,7 @@ main {
   --scale: 0.8;
 
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--aqua-bright);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1180,7 +1236,7 @@ main {
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.blog-post-item > a:hover .blog-item-title { color: var(--aqua-bright); }
 
 .blog-text {
   color: var(--light-gray);
@@ -1239,7 +1295,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
+.form-input:focus { border-color: var(--aqua-bright); }
 
 textarea.form-input {
   min-height: 100px;
@@ -1257,7 +1313,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--aqua-bright);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1283,9 +1339,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover { background: var(--bg-gradient-cyan-1); }
 
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+.form-btn:hover::before { background: var(--bg-gradient-cyan-2); }
 
 .form-btn:disabled {
   opacity: 0.7;
@@ -1695,7 +1751,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button:hover { color: var(--light-gray-70); }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+  .filter-item button.active { color: var(--aqua-bright); }
 
   /* portfolio and blog grid */
 
